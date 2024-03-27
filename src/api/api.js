@@ -15,7 +15,10 @@ export const starWarsApi = createApi({
         }),
         getFilmById: builder.query({
             query: (id) => `/films/${id}?format=json`
+        }),
+        getPeoples: builder.query({
+            query: (page) => `/people?page=${page}&format=json`
         })
     })
 })
-export const { useGetFilmsQuery, useGetFilmByIdQuery } = starWarsApi
+export const { useGetFilmsQuery, useGetFilmByIdQuery, useGetPeoplesQuery } = starWarsApi
